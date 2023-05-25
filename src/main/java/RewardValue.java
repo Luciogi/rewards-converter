@@ -3,9 +3,11 @@ public class RewardValue {
     int miles;
     static final double MILES_TO_CASH_CONVERSION_RATE = 0.0035;
     RewardValue(double cash){
+        this.cash = cash;
         this.miles = convertToMiles(cash);
     }
     RewardValue(int miles){
+        this.miles = miles;
         this.cash = convertToCash(miles);
     }
     public double getCashValue(){
